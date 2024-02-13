@@ -1,0 +1,94 @@
+<div class="relative overflow-x-auto mx-12 w-full ">
+    <h2 style="color:#4f46e5; font-weight: bold;" class="text-xl mt-4">LISTADO DE NORMAS</h2>
+    <div class="text-end mt-5 mb-4">
+      <button class="hidden sm:inline-flex ml-auto " mat-flat-button [color]="'primary'" (click)="irANorma()">
+        <span>Nueva norma</span>
+      </button>
+    </div>
+    <table class="w-full text-left rtl:text-right ">
+      <thead class="text-base text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+          <th scope="col" class="px-6 py-3">
+            N°
+          </th>
+          <th scope="col" class="px-6 py-3">
+            Nombre
+          </th>
+          <th scope="col" class="px-6 py-3">
+            Base Legal
+          </th>
+          <th scope="col" class="px-6 py-3">
+            Organismo Emisor
+          </th>
+          <th scope="col" class="px-6 py-3">
+            Fecha de publicación
+          </th>
+          <th scope="col" class="px-6 py-3">
+            Acciones
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" *ngFor="let datos of datosReq">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            {{datos.id}}
+          </th>
+          <td class="px-6 py-4">
+            {{datos.nombre}}
+
+          </td>
+          <td class="px-6 py-4">
+            {{datos.baselegal}}
+
+          </td>
+          <td class="px-6 py-4">
+            {{datos.organEmi}}
+          </td>
+          <td class="px-6 py-4">
+            {{datos.fechapub}}
+          </td>
+          <td class="px-6 py-4">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Ver</button>
+              <button mat-menu-item>Editar</button>
+              <button mat-menu-item>Eliminar</button>
+            </mat-menu>
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->
+    <div class="ml-auto">
+      <nav aria-label="Page navigation example ">
+        <ul class="list-style-none flex ">
+          <li>
+            <a class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+              href="#">Previous</a>
+          </li>
+          <li>
+            <a class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+              href="#">1</a>
+          </li>
+          <li aria-current="page">
+            <a class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+              href="#">2</a>
+          </li>
+          <li>
+            <a class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+              href="#">3</a>
+          </li>
+          <li>
+            <a class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+              href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>

@@ -1,0 +1,56 @@
+<div class="relative overflow-x-auto mx-12 w-full ">
+    <h2 style="color:#4f46e5; font-weight: bold;" class="text-xl mt-4">NORMAS POR APROBAR</h2>
+    <div class="text-end mt-5 mb-4">
+        <button class="hidden sm:inline-flex ml-auto " mat-flat-button [color]="'primary'">
+            <span>Agregar</span>
+        </button>
+    </div>
+    <table class="w-full text-left rtl:text-right ">
+        <thead class="text-base text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    N°
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Tipo
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Fecha
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Usuario
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Ver
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" *ngFor="let normasapr of normasaprobar">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {{normasapr.id}}
+                </th>
+                <td class="px-6 py-4">
+                    {{normasapr.tipo}}
+
+                </td>
+                <td class="px-6 py-4">
+                    {{normasapr.fecha}}
+
+                </td>
+                <td class="px-6 py-4">
+                    {{normasapr.usuario}}
+                </td>
+                <td class="px-6 py-4">
+                    <button mat-icon-button>
+                        <mat-icon>visibility</mat-icon>
+                    </button>
+                </td>
+
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>

@@ -1,10 +1,9 @@
 <div class="relative overflow-x-auto mx-12 w-full ">
     <h2 style="color:#4f46e5; font-weight: bold;" class="text-xl mt-4">LISTADO DE NORMAS</h2>
-    <div class="text-end mt-5 mb-4">
-      <button class="hidden sm:inline-flex ml-auto " mat-flat-button [color]="'primary'" (click)="irANorma()">
-        <span>Nueva norma</span>
-      </button>
-    </div>
+    <div class="flex-1 text-end mb-4">
+      <button type="submit"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" (click)="irANorma()">Nueva norma</button>
+  </div>
     <table class="w-full text-left rtl:text-right ">
       <thead class="text-base text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
         <tr>
